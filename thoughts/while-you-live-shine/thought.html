@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="center poem">
+      <p id="s1">while you live, shine</p>
+      <p id="s2">have no grief at all</p>
+      <p id="s3">life exists for a short while</p>
+      <p id="s4">and Time demands his due</p>
+      <audio id="gitarro" src="gitarro.ogg"></audio>
+      <button onclick="swapText()">?</button>
+    </div>
+    <div class="inlineCenter">
+      <p>people who have found me:</p>
+    </div>
+    <!-- hey. making this on 18/06/21, just ate some yong tau foo, had a good lunch. enjoying some post-rock music with the fan blowing. hope you're having a good time as well. -->
+    <script>
+      let isGreek = false;
+      function swapText() {
+        //play a harp sound or sth
+        let gitarro = document.getElementById("gitarro");
+        let line1 = document.getElementById("s1");
+        let line2 = document.getElementById("s2");
+        let line3 = document.getElementById("s3");
+        let line4 = document.getElementById("s4");
+        if (isGreek) {
+          gitarro.currentTime = 0;
+          gitarro.play();
+          line1.innerHTML = "while you live, shine";
+          line2.innerHTML = "have no grief at all";
+          line3.innerHTML = "life exists for a short while";
+          line4.innerHTML = "and Time demands his due";
+          isGreek = false;
+        } else {
+          gitarro.currentTime = 0;
+          gitarro.play();
+          document.getElementById("gitarro").play();
+          line1.innerHTML = "Ὅσον ζῇς φαίνου";
+          line2.innerHTML = "μηδὲν ὅλως σὺ λυποῦ";
+          line3.innerHTML = "πρὸς ὀλίγον ἔστι τὸ ζῆν";
+          line4.innerHTML = "τὸ τέλος ὁ χρόνος ἀπαιτεῖ";
+          isGreek = true;
+        }
+      }
+    </script>
+  </body>
+</html>
