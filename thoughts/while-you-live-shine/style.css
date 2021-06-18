@@ -9,6 +9,7 @@ button {
 }
 .inlineCenter {
   text-align: center;
+  padding: 1em 1em 1em 1em;
 }
 .poem {
   background: black;
